@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    /* background: linear-gradient(rgb(250, 198, 102), rgba(196,196,196,0)); */
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: relative;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    top:70px;
+    position: relative;
+    background-image: url('mono3.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 800px;
+    /* box-shadow: 0 0.1em 0.1em 0.em #01683f; */
+    border: 14px solid #217abc;;
+
+}
+.pcell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
+.cell{
+    /* border:5px solid red; */
+    width: 61px;
+    height: 120px;
+    position: relative;
+    
+}
+.ncell{
+    width: 120px;
+    position: relative;
+
+}
+.pcell:nth-child(2){
+    bottom: 0;
+}
+.pcell:nth-child(3) {
+    flex-direction: column;
+    left: 0;
+}
+.pcell:nth-child(3) .cell {
+    height: 61px;
+    width: 120px;
+    /* border: 5px solid green; */
+
+}
+.pcell:nth-child(4) .cell {
+    height: 61px;
+    width: 120px;
+    /* border: 5px solid green; */
+    position: relative;}
+.pcell:nth-child(4){
+    flex-direction: column;
+    right: 0;
+}
+.pcell:nth-child(3) .ncell{
+    height: 120px;
+
+}
+.pcell:nth-child(4) .ncell{
+    height: 120px;
+
+}
+
+.red{
+    border-radius: 100%;
+    background-color: rgb(219, 62, 62);
+    width: 35px;
+    border: 8px solid red;
+    height: 35px;
+    position: absolute;
+    visibility: hidden;
+}
+.blue{
+    border-radius: 100%;
+    border: 8px solid blue;
+    background-color: rgb(43, 43, 221);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    visibility: hidden;
+
+}
+.green{
+    border-radius: 100%;
+    background-color: rgb(59, 224, 59);
+    border: 8px solid green;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    visibility: hidden;
+}
+.yellow{
+    border-radius: 100%;
+    background-color: rgb(238, 238, 53);
+    border: 8px solid orangered;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    visibility: hidden;
+}
+.color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dice{
+    position: relative;
+    width: 120px;
+    height: 130px;
+    background: rgb(255, 255, 255);
+    transform: translateY(-90px) translateX(1653px);
+    padding: 10px;
+    border-radius: 20px;
+    border:5px solid orangered
+    
+}
+.one{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 8px;
+    gap:8px;
+    background-color: white;
+}
+
+#d1, #d2, #d3, #d4, #d5, #d6{
+    position: absolute;
+    margin: 10px;
+    visibility: hidden;
+  }
+.dot{
+    background: rgb(0, 0, 0);
+    border-radius: 100%;
+    width: 30px;
+    height: 26px;
+}
+button{
+   width: 120px;
+   height: 50px; 
+   font-size: 1.2em;
+   font-weight: bold;
+   background-color: #7ca2ff;
+   padding: 0.8em 1.5em;
+   color: #fff;
+   border: none;
+   box-shadow: 0 0.5em 1em rgba(47 , 107 , 255 , 0.6),
+                         inset 0.1em 0.1em 0.4em #4379ff,
+                         inset -0.2em -0.2em 0.8em #004aff;
+   border-radius: 0.5em;
+   position: absolute;
+    top: 200px;
+    left:50px;
+   margin-right: 15px; 
+   transform: translateY(-200px) translateX(550px);
+
+}
+.lal button {
+    width: 120px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(255, 72, 72);
+    padding: 0.8em 1.5em;
+    color: rgb(255, 255, 255);
+    border: none;
+    position: absolute;
+    top: 279px;
+    left: -401px;
+    box-shadow: rgb(129 77 77 / 60%) 0px 0.5em 1em,
+     rgb(255 67 67) 0.1em 0.1em 0.4em inset,
+      rgb(255 0 0) -0.2em -0.2em 0.8em inset;
+    border-radius: 0.5em;
+}
+.hara button {
+    width: 120px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #2bc537;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 279px;
+    left: -401px;
+    box-shadow: 0 0.5em 1em rgb(2 33 3 / 60%), 
+                         inset 0.1em 0.1em 0.4em #277f19, 
+                         inset -0.2em -0.2em 0.8em #4eff3c;
+    border-radius: 0.5em;
+    /* margin-right: 15px; */
+}
+.neela button{
+    width: 120px;
+    height: 50px; 
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #7ca2ff;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 279px;
+    left: -401px;
+    box-shadow: 0 0.5em 1em rgba(47 , 107 , 255 , 0.6),
+                          inset 0.1em 0.1em 0.4em #4379ff,
+                          inset -0.2em -0.2em 0.8em #004aff;
+    border-radius: 0.5em;
+
+    /*margin-right: 15px; */
+   
+
+}
+.peela button {
+    width: 120px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #ffbf7c;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 279px;
+    left: -401px;
+    box-shadow: 0 0.5em 1em rgb(255 248 47 / 60%),
+                         inset 0.1em 0.1em 0.4em #ff4400, 
+                         inset -0.2em -0.2em 0.8em #ff7800;
+    border-radius: 0.5em;
+    /* margin-right: 15px; */
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.id  h2{
+    top:18px;
+    left: 139px;
+    position: absolute;
+    padding: 5px;
+}
+.lal {
+    z-index: 1000;
+    background: #ffb9b9;
+    height: 159px;
+    width: 395px;
+    position: absolute;
+    transform: translateY(-853px) translateX(30px);
+    /* border: 2px solid red; */
+    border-radius: 1em;
+    box-shadow:inset -0.6em -0.6em 1em #c20b0b,
+                         inset 0.4em 0.4em 0.5em #e52626, 
+                         0em 0em 1em 6px #e09191;
+}
+
+
+    .neela {
+        z-index: 1000;
+        height: 159px;
+        width: 395px;
+        background: #9090ff;
+        position: absolute;
+        transform: translateY(-450px) translateX(30px);
+        /* border: 2px solid red; */
+        box-shadow: inset -0.6em -0.6em 1em #0900e5,
+                              inset 0.4em 0.4em 0.5em #1500ff, 
+                              0em 0em 3em 3px #0d006f;
+                                      border-radius: 1em;
+    }
+.hara {
+    z-index: 1000;
+    height: 159px;
+    width: 395px;
+    position: absolute;
+    background:#90f090;;
+    transform: translateY(-656px) translateX(30px);
+    /* border: 2px solid red; */
+    box-shadow:inset -0.6em -0.6em 1em #008500,
+                         inset 0.4em 0.4em 0.5em #0b8a1b,
+                         0em 0em 2em 3px #02bc00;
+
+                         border-radius: 1em;
+                      
+}
+.peela {
+    z-index: 1000;
+    height: 159px;
+    width: 395px;
+    background: #eeeeaf;
+    position: absolute;
+    border-radius: 1em;
+    transform: translateY(-250px) translateX(30px);
+    /* border: 2px solid red; */
+  box-shadow:inset -0.6em -0.6em 1em #f3ff00,
+                      inset 0.4em 0.4em 0.5em #d4ff00,
+                      0em 0em 2em #e9ff07;
+}
+.inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.id{
+    display: flex;
+    justify-content: center;
+
+}
+.id img{
+    width: 110px;
+    height: 110px;
+    top:18px;
+    left: 20px;
+    position: absolute;
+    box-shadow: inset -0.6em -0.6em 1em #bfd1bf,
+    \ inset 0.4em 0.4em 0.5em #eff3ff, 
+    0.8em 0.8em 2em #ffffff;
+}
+section h3{
+    font-size: 25px;
+    font-weight: bold;
+    top:21px;
+    left: 262px;
+    position: absolute;
+}
+/* .per2{
+    position: relative;
+    border: 2px solid green;
+    padding: 20px;
+    width: max-content;
+    height: max-content;
+} */
+.tickets{
+    position: absolute;
+    display: flex;
+    /* border: 2px solid blue; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 10px;
+    /* box-shadow: inset  -0.6em -0.6em 1em #d1bfbf,
+    inset  0.4em 0.4em 0.5em #ffeff4,
+    0.8em 0.8em 2em #d7838a; */
+    width: 250px;
+    height:350px;
+    top: 114px;
+    left: 1578px;
+    background: white;
+    box-shadow:inset -0.6em -0.6em 1em #008500,
+                         inset 0.4em 0.4em 0.5em #0b8a1b,
+                         0em 0em 2em 3px #02bc00;
+}
+.ticbox{
+    position: absolute;
+    top: 25px;
+    left: 39px;
+    visibility:hidden;
+}
+.tickets img{
+    width: 170px;
+    height: 200px;
+}
+.tickets button{
+    width: 70px;
+    height: 40px; 
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ff0000;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    /* box-shadow: 0 0.5em 1em rgba(255, 47, 47, 0.6),
+                          inset 0.1em 0.1em 0.4em #ff438e,
+                          inset -0.2em -0.2em 0.8em #ff0000; */
+    border-radius: 0.5em;
+
+    /*margin-right: 15px; */
+   
+}
+/* .pur{
+    position:absolute;
+    top: 457px;
+    left: -438px;
+} */
+.buy{
+    position: absolute;
+    transform: translateY(50px) translateX(-80px);
+}
+.rent{
+    position: absolute;
+    transform: translateY(50px) translateX(0px);
+}
+.can{
+    position: absolute;
+    transform: translateY(50px) translateX(80px);
+    text-align: center;
+}
+.name1 {
+    position: absolute;
+    top: 26px;
+    font-size: 5em;
+    color: white;
+    left: 0;
+    font-size: 2em;
+}
+.name {
+    position: absolute;
+    top: 870px;
+    font-size: 5em;
+    color: white;
+    left: 705px;
+}
